@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What is your favourite number?</h1>
+    <input type="number" name="userInput">
+    <button onclick="checkNumber()">Check</button>
+
+    <script>
+        var favouriteNumber = 19;
+        function checkNumber() {
+            var userInput = parseInt(document.getElementsByTagName('input')[0].value);
+            console.log("The user input is " + userInput + " and has the datatype " + typeof(userInput));
+
+            if(userInput < 0) {
+                userInput *= -1;
+            }
+
+            if(userInput > favouriteNumber) {
+                var difference = userInput - favouriteNumber;
+            } else {
+                var difference = favouriteNumber - userInput;
+            }
+            console.log("The difference is " + difference);
+
+            switch(true) {
+                case(difference >= 20): alert("You're way off my friend");
+                break;
+                case(difference >= 10): alert("You're still a bit off");
+                break;
+                case(difference >= 1): alert("That was close");
+                break;
+                default: alert("You guessed right, congrats!!")
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What is your favourite food?</h1>
+    <h2>And why are you wrong?</h2>
+    <input type="text" name="userInput">
+    <button onclick="checkFood()">Check your Choice!</button>
+    <h1></h1>
+    <script>
+        function checkFood() {
+            //The checkFood() function compares a user input to predefined food choices and mocks their favourite food input in the provided second h1 getElementsByName
+            //It does not take any arguments
+            //Input is read from the input field names "userInput" and compared in a try catch statement
+            //It outputs insults via .innerHTML to the second h1 element of the page
+            console.log("function is called");
+            var favouriteFood = document.getElementsByName("userInput")[0].value.toLowerCase();
+            //user iput is still not checked for special characters, this needs to be implemented before release
+            console.log("user input is: " + favouriteFood);
+            try {
+                if(favouriteFood == "icecream") throw "Are you five years old?";
+                if(favouriteFood == "sushi") throw "Oh my, how original";
+
+            } catch(err) {
+                document.getElementsByTagName("h1")[1].innerHTML = err;
+            }
+        }
+    </script>
+</body>
+</html>

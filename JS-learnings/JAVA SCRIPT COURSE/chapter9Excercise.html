@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            height: 300px;
+            width: 300px;
+            border: 1px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+        .box:first-of-type {margin-right: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" onmouseover="randomNumber();compareNumbers()"></div>
+        <div class="box" onmouseover="randomNumber();compareNumbers()"></div>
+    </div>
+    <h1></h1>
+
+    <script>
+        var firstBox = document.getElementsByTagName('div')[1];
+        var secondBox = document.getElementsByTagName('div')[2];
+
+        function randomNumber() {
+            firstBox.innerHTML = Math.floor(Math.random() * 10);
+            secondBox.innerHTML = Math.floor(Math.random() * 10);
+        }
+
+        function compareNumbers() {
+            if (firstBox.innerHTML > secondBox.innerHTML) {
+                document.getElementsByTagName("h1")[0].innerHTML = "FIRST BOX IS BIGGER";
+            } else {
+                document.getElementsByTagName("h1")[0].innerHTML = "SECOND BOX IS BIGGER";
+            }
+        }
+    </script>
+</body>
+</html>

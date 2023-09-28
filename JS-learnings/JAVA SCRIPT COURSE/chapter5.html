@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="nicePragraph">Something</p>
+    <p class="nicePragraph">Something</p>
+    <p class="nicePragraph">Something</p>
+    <p class="nicePragraph">Something</p>
+    <h2>Hello World</h2>
+    <input type="text" name="userInput">
+    <button onclick="domPractice()">Click Me</button>
+
+
+
+    <script>
+        function domPractice() {
+            document.getElementsByTagName("p")[1].innerHTML = "Something else";
+            document.querySelector(".niceParagraph").style.color = "blue";
+            var textInput = document.getElementsByName("userInput")[0].value;
+            document.getElementsByTagName("h2")[0].innerHTML = textInput;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9</title>
+    <style>
+        div {
+            height: 300px; width: 300px; margin: 500px; border: 1px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div onmouseover="colorMe()" onmouseout="resetColor()"></div>
+
+    <script>
+
+        function colorMe() {
+            document.getElementsByTagName('div')[0].style.backgroundColor = "blue";
+        }
+
+        function resetColor() {
+            document.getElementsByTagName('div')[0].style.backgroundColor = "white";
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

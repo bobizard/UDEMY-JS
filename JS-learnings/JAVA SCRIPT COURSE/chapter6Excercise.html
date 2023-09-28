@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What is your insurance price? Enter your cars age and we will calculate it for ya!</h1>
+    <input type="number" name="userInput">
+    <button onclick="checkPrice()">Calculate!</button>
+    <h1></h1>
+    <script>
+        function checkPrice() {
+
+            console.log("function is called");
+            var carsAge = parseInt(document.getElementsByName("userInput")[0].value);
+            var Price = carsAge * 20;
+                document.getElementsByTagName("h1")[1].innerHTML = "Your insurance is " + Price + " EUR";
+
+            try {
+                if(carsAge <=  0) throw "Number too low";
+                if(carsAge >  100) throw "Your car is too old";
+
+            } catch(err) {
+                document.getElementsByTagName("h1")[1].innerHTML = err;
+            }
+        }
+    </script>
+</body>
+</html>

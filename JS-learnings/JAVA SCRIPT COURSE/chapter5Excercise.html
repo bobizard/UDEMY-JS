@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {height:50px; background:red;};
+    </style>
+</head>
+<body>
+    <div>THIS IS RED</div>
+    <div>THIS IS RED</div>
+    <div>THIS IS RED</div>
+    <div>THIS IS RED</div>
+    <div>THIS IS RED</div>
+    <div>THIS IS RED</div>
+    <div>THIS IS RED</div>
+
+    <button onclick="changeColors()">Change colors</button>
+
+
+    <script>
+        function changeColors() {
+            var blueBox = document.getElementsByTagName("div")[1];
+
+            blueBox.style.background = "blue";
+            blueBox.innerHTML = "THIS IS BLUE";
+        }
+    </script>
+</body>
+</html>

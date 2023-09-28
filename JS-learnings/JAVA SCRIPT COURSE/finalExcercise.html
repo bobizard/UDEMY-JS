@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {border:1px solid black;}
+        td {height:20px;}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>first player</td>
+            <td>second player</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr >
+            <td colspan="2" align="center">SUM</td>
+        </tr>
+        <tr>
+            <td class="firstscore"></td>
+            <td class="secondscore"></td>
+        </tr>
+    </table>
+    <button onclick="play()">Play</button>
+    <h1></h1>
+
+    <script>
+        var player1TotalScore = 0;
+        var player2TotalScore = 0;
+        var maxScore = 23;
+        var turnTracker = -1;
+        var cellCounter = 2;
+
+
+        function play() {
+
+            if (turnTracker < 0) {
+                turnTracker *= -1;
+
+                player1DiceRoll = Math.floor(Math.random() *6 + 1);
+                player1TotalScore += player1DiceRoll;
+                console.log ("player 1 roll dice result: " + player1DiceRoll);
+                console.log ("player 1 total result: " + player1TotalScore);
+                document.querySelector(".firstscore").innerHTML = player1TotalScore;
+
+
+
+                if (player1TotalScore >= maxScore) {
+                    return document.getElementsByTagName("h1")[0].innerHTML = "player 1 is the winner";
+                }
+
+
+            } else {
+                turnTracker *= -1;
+
+                player2DiceRoll = Math.floor(Math.random() * (7 - 1) + 1);
+                player2TotalScore += player2DiceRoll;
+                console.log ("player 2 roll dice result: " + player2DiceRoll);
+                console.log ("player 2 total result: " + player2TotalScore);
+                document.querySelector(".secondscore").innerHTML = player2TotalScore;
+
+
+                if (player2TotalScore >= maxScore) {
+                    return document.getElementsByTagName("h1")[0].innerHTML = "player 2 is the winner";
+
+                } 
+            }
+
+                if (cellCounter % 2 == 0) {
+                    document.getElementsByTagName("td")[cellCounter].innerHTML = player1DiceRoll;
+
+
+                } else {
+                    document.getElementsByTagName("td")[cellCounter].innerHTML = player2DiceRoll;
+                }
+
+                cellCounter++;
+            }
+        
+
+
+
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var myArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+        for (var i = 0; i <= myArray.length - 1; i++) {
+            document.write((myArray[i] + "<br>"));
+        } 
+
+        document.write("<br>");
+
+        var myMultiArray = [["one", "two", "three"], ["four", "five", "six"], ["seven", "eight", "nine"]];
+        for (var i = 0; i <= myMultiArray.length - 1; i++) {
+
+            for (var ii = 0; ii <= myMultiArray[i].length - 1; ii++) {
+            document.write((myMultiArray[i][ii] + "<br>"));
+            }
+        } 
+
+
+    </script>
+    
+</body>
+</html>

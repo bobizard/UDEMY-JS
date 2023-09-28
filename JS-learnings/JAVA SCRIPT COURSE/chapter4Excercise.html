@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display:flex;flex-direction: column;height: 200px;justify-content: space-evenly;text-align: center;">
+        <a href="#" style="color:red" onclick="alertFunction()">ALERT</a>
+        <a href="#" style="color:green" onclick="confirmFunction()">CONFIRMATION</a>
+        <a href="#" style="color:blue" onclick="promptFunction()">PROMPT</a>
+    </div>
+    <script>
+        function alertFunction() {
+            var firstNumber = alert("THIS IS ALERT");
+        }
+
+        function confirmFunction() {
+            var firstNumber = confirm("PLEASE CONFIRM HERE");
+        }
+
+        function promptFunction() {
+            var firstNumber = prompt("ENTER YOUR NAME");
+        }
+    </script>
+</body>
+</html>

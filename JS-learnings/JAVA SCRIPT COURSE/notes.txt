@@ -1,0 +1,7 @@
+high/low level programmig languages
+document.write()
+return statement
+querySelectorAll vs getElementsByClassName
+parseInt;
+
+DOM browser structure on client side

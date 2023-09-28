@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid black;
+      }
+      td {
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+ 
+
+    <script>
+      const recordCollection = {
+        2548: {
+          albumTitle: 'Slippery When Wet',
+          artist: 'Bon Jovi',
+          tracks: ['Let It Rock', 'You Give Love a Bad Name']
+        },
+        2468: {
+          albumTitle: '1999',
+          artist: 'Prince',
+          tracks: ['1999', 'Little Red Corvette']
+        },
+        1245: {
+          artist: 'Robert Palmer',
+          tracks: []
+        },
+        5439: {
+          albumTitle: 'ABBA Gold',
+        }
+      };
+      console.log(recordCollection);
+
+    //   var result = recordCollection[5439].albumTitle;
+    //   recordCollection[5439].albumTitle.push("Kiwi");
+
+    //   console.log(result);
+
+
+
+
+      // Only change code below this line
+      function updateRecords(records, id, prop, value) {
+
+        //recordCollection[5439].albumTitle.push(value);
+
+        if (prop != tracks && value.lenght != 0) {
+
+            records = records[id].prop = value;
+            console.log(recordCollection);
+
+        } else if (prop == tracks && records[id].prop.lenght != 0) {
+            records = records[id] = prop;
+
+
+        } else if (prop == tracks && records[id].prop.lenght > 0) {
+            records = records[id].prop.push(value);
+           console.log(recordCollection);
+
+        // } else if (value.lenght === 0) {
+        //    delete value;
+        //    return records[id].prop[value];
+        // }
+      }
+
+    updateRecords(recordCollection, 5439, "artist", "ABBA");
+
+
+      }
+    </script>
+  </body>
+</html>
